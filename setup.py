@@ -104,7 +104,7 @@ class cmake_build(build):
         build.run(self)
 
 setup(
-        name = "pymesh2",
+        name = "pymeshv2",
         description = "Mesh Processing for Python",
         version = __version__,
         author = "Qingnan Zhou",
