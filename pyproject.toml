@@ -19,4 +19,5 @@ test-command = "python -c 'import pymesh, sys; result = pymesh.test(); sys.exit(
 archs = ["x86_64"]
 manylinux-x86_64-image = "manylinux_2_28"
 before-all = "dnf install -y boost-devel cmake gcc-toolset-9-gcc gcc-toolset-9-gcc-c++ gmp-devel mpfr-devel unzip zip && ln -sf /usr/bin/cmake /usr/local/bin/cmake"
+repair-wheel-command = "LD_LIBRARY_PATH=/project/python/pymesh/third_party/lib auditwheel repair -w {dest_dir} {wheel}"
 environment = { CC = "/opt/rh/gcc-toolset-9/root/usr/bin/gcc", CXX = "/opt/rh/gcc-toolset-9/root/usr/bin/g++", NUM_CORES = "2" }
